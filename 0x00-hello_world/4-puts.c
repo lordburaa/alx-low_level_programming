@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
- * This is used to 
- * print text
+ *This is used to 
+ *print text
  */
 int main(void)
 {
