@@ -1,15 +1,15 @@
 #include<stdio.h>
 /**
  * main - Entry point
- * print the size of
+ * P
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 int sI;
 char sC;
-long int sL;
-long long int sLL;
+long sL;
+long long sLL;
 float sF;
 printf("Size of a char: %lu byte(s)\n", sizeof(sC));
 printf("Size of an char: %lu byte(s)\n", sizeof(sI));
