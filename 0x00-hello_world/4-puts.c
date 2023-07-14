@@ -1,7 +1,8 @@
 #include<stdio.h>
 /**
- *Thisisused to
- *print text
+ * main - Entry point
+ * print text
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
