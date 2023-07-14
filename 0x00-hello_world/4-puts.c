@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- *This is used to 
+ *Thisisused to
  *print text
  */
 int main(void)
