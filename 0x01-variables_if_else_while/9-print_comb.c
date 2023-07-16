@@ -13,7 +13,8 @@ if (i != 9)
 {
 putchar(44);
 }
-putchar(9);
+putchar(32);
+
 }
 return (0);
 }
