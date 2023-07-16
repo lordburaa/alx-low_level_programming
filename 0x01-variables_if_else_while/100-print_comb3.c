@@ -16,10 +16,13 @@ for (i = '0'; i < '9'; i++)
 	{
 		if (j <= '9' && (i != j))
 		{
+			if (j > i)
+			{
 			putchar(i);
 			putchar(j);
 			putchar(',');
 			putchar(' ');
+			}
 		}
 		else
 			continue;
