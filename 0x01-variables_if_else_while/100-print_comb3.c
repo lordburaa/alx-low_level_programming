@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - combination of number
+ * main - comb of number
  * Return: Always 0
  */
 int main(void)
@@ -24,8 +24,6 @@ for (i = '0'; i < '9'; i++)
 			putchar(' ');
 			}
 		}
-		else
-			continue;
 	}
 
 }
