@@ -12,9 +12,9 @@ putchar(i + 48);
 if (i != 9)
 {
 putchar(44);
-}
 putchar(32);
-
 }
+}
+putchar(36);
 return (0);
 }
