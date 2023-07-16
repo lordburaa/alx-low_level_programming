@@ -17,7 +17,7 @@ int e, f;
 				putchar(' ');
 				putchar((f / 10) + '0');
 				putchar((f % 10) + '0');
-				if (e != '98' || f != '99')
+				if (e != 98 || f != 99)
 				{
 					putchar(',');
 					putchar(' ');
