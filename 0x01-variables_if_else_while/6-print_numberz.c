@@ -1,15 +1,17 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 /**
- * main - print 
+ * main - print
  * Return: Always 0
  */
 int main(void)
 {
-int i, num;
+int i;
 for (i = 0; i < 10; i++)
 {
-num = i;
-putchar(num);
+
+putchar(i + 48);
 }
 putchar('\n');
 return (0);
