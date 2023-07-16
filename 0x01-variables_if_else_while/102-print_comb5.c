@@ -13,7 +13,7 @@ int e, f;
 			if (e < f && e != f)
 			{
 				putchar((e / 10) + '0');
-				putchar((f % 10) + '0');
+				putchar((e % 10) + '0');
 				putchar(' ');
 				putchar((f / 10) + '0');
 				putchar((f % 10) + '0');
