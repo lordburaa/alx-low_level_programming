@@ -1,31 +1,29 @@
-#include <stdio.h>
-/**
- * main - print different combination
- * print
- * Return: Always 1
- */
+#include<stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 int main(void)
 {
 int i, j;
 i = '0';
-j = '1';
-           while(i <= '9')
-	   {
-		   j = '0';
-          	while (j <= '9')
-	      {
-		      if (i < j)
-		      {
-			      putchar(i);
-			      putchar(j);
-		if (i !='8' || i == '8' && j != '9')
-		      {
-			      putchar(',');
-			      putchar(' ');
-		      }
-		      }
-	       }	  
-	   }
-	putchar('\n');
-	return (1);
+j = '0';
+for (i = '0'; i < '9'; i++) 
+{
+	for (j = '1'; j <= '9'; j++)
+	{
+		if( j <= '9')
+		{
+		
+		
+		putchar(i);
+		putchar(j);
+		putchar(',');
+		putchar(' ');
+		}
+		else
+			continue;
+	}
+
 }
+putchar('\n');
+return (0);}
