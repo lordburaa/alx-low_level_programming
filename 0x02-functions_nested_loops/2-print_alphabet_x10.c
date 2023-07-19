@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - 10 times alphabet
+ * print_alphabet_x10 - 10 times alphabet
  * Return: Always 0
  */
 void print_alphabet_x10(void)
@@ -8,7 +8,7 @@ void print_alphabet_x10(void)
 	char al;
 	int i;
 	i = 0;
-	while(i < 10)
+	while (i < 10)
 	{
 		al = 'a';
 		while (al <= 'z')
