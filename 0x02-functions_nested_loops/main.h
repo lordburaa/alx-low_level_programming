@@ -1,7 +1,6 @@
-#ifndef main
-#define main
-void _putchar()
-{
-	printf("_putchar");
-}
+#ifndef main_h
+#define main_h
+
+int _putchar(char);
+
 #endif
