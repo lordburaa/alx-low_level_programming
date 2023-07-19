@@ -26,7 +26,7 @@ int main(void)
 	{
 	half1 = fb1_half1 + fb2_half1;
 	half2 = fb1_half2 + fb2_half2;
-	if (fb1_half2 + fb2_hal2 > 9999999999)
+	if (fb1_half2 + fb2_half2 > 9999999999)
 	{
 	half1 += 1;
 	half2 %= 10000000000;
