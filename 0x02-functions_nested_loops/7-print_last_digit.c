@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * print_last_digit
+ * print_last_digit - n
+ * @n: the int to extract the last
  * Return: Always: 0
  */
 int print_last_digit(int n)
