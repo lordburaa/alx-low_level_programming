@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * prinr_line - Draws straight line according to parameter
+ * print_line - Draws straight line according to parameter
  * @n: The nmber of lines
  * Return: empty
  */
