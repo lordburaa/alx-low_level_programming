@@ -5,7 +5,7 @@
  * @n: the integer to pritns.
  * Return: nothing
  */
-void prirnt_number(int n)
+void print_number(int n)
 {
 	unsigned int k = n;
 
@@ -19,5 +19,5 @@ void prirnt_number(int n)
 
 	if (k != 0)
 		print_number(k);
-	_putchar((unsigned int) n % 10 + '0';
+	_putchar((unsigned int) n % 10 + '0');
 }
