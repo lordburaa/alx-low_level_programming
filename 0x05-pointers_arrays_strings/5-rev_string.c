@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * rev_string(char *s)
+ * rev_string - reverse string having
  * @s: the string to be modified
- * Return: void
+ * Return: 0
  */
 void rev_string(char *s)
 {
@@ -18,6 +18,5 @@ void rev_string(char *s)
 		tmp = s[idx];
 		s[idx] = s[l - idx - 1];
 		s[l - idx - 1] = tmp;
-	
 	}
 }
