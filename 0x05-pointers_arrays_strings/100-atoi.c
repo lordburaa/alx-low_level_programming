@@ -7,7 +7,7 @@
 int _atoi(char *s)
 {
 	int i, d, n, lg, f, dgt;
-	
+
 	i = 0;
 	d = 0;
 	n = 0;
@@ -23,7 +23,7 @@ int _atoi(char *s)
 			++d;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			dgt = s[i] -'0';
+			dgt = s[i] - '0';
 			if (d % 2)
 			{
 				dgt = -dgt;
