@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * re_string - rev arry
+ * rev_string - rev arry
  * @n: integer params
  * Return: 0
  */
@@ -28,7 +28,7 @@ void rev_string(char *n)
  * @n1: 1st number
  * @n2: 2nd number
  * @r: pointer
- @ size_r:buffer
+ * @size_r: buffer
  * Return: pointer to calling function
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -38,7 +38,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	while (*(n1 + i) != '\0')
 		i++;
-	while(*(n2 + j) != '\0')
+	while (*(n2 + j) != '\0')
 		j++;
 	i--;
 	j--;
@@ -54,7 +54,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		val2 = 0;
 	else
 		val2 = *(n2 + j) - '0';
-	tmp_tot = val1 + val2 +overflow;
+	tmp_tot = val1 + val2 + overflow;
 	if (tmp_tot >= 10)
 		overflow = 1;
 	else
