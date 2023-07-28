@@ -20,5 +20,5 @@ char *leet(char *n)
 			}
 		}
 	}
-	retubr (n);
+	return (n);
 }
