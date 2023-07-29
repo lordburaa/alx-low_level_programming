@@ -2,8 +2,8 @@
 #include <stdio.h>
 /**
  * print_buffer - print number
- * @b: buffer
- * @size: size
+ * @b: bufferr
+ * @size: sizee
  * Return: void
  */
 void print_buffer(char *b, int size)
@@ -11,6 +11,7 @@ void print_buffer(char *b, int size)
 	int k, i, j;
 
 	k = 0;
+
 	if (size <= 0)
 	{
 		printf("\n");
