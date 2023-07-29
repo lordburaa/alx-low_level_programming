@@ -34,13 +34,13 @@ void print_buffer(char *b, int size)
 		}
 		for (i = 0; i < j; i++)
 		{
-			int d = *(b + k + i);
+			int c = *(b + k + i);
 
-			if (d < 32 || d > 132)
+			if (c < 32 || c > 132)
 			{
-				d = '.';
+				c = '.';
 			}
-			printf("%c", d);
+			printf("%c", c);
 		}
 		printf("\n");
 		k += 10;
