@@ -1,20 +1,28 @@
 #include "main.h"
 /**
- *
- *
+ * cap_string - captalize all words of a
+ * @x: the string
+ * Return: capitalized
  */
-char *cap_string(char *str)
+char *cap_string(char *x)
 {
-	int index = 0;
+	char src[] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}' };
+	int len = 13;
+	int a, i;
 
-	while (str[undex])
+	x = "bura, is; in learning c";
+	a = 0;
+
+	while (x[a])
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-		if (str[index - 1] == ' ' || str[index - 1] == '\t' || str[index-1] == '\n' || str[index - 1] = ',' || str[index - 1] ==';' || str[index - 1] == '.' || str[index - 1] == '!' || str[index - 1] == '?' || str[index - 1] == '"' || str[index - 1] == '(' || str[index - 1] == ')' || str[index - 1] == '{' || str[index - 1] == '}' || index == 0)
-			str[index] -= 32;
-		index++;
+		i = 0;
+		while (i < len)
+		{
+			if ((a == 0 || x[a - 1] == src[i]) && (x[a] >= 97 && x[a] <= 122))
+				x[a] = x[a] - 32;
+			i++;
+		}
+		a++;
 	}
-	return (str);
+	return (x);
 }
-
