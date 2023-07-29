@@ -10,7 +10,6 @@ char *cap_string(char *x)
 	int len = 13;
 	int a, i;
 
-	x = "bura, is; in learning c";
 	a = 0;
 
 	while (x[a])
