@@ -1,0 +1,1 @@
+0x07-pointer_array_strings
