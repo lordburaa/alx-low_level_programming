@@ -1,10 +1,12 @@
 #include "main.h"
+
 int check_pal(char *s, int i, int len);
 int _strlen_recursion(char *s);
+
 /**
  * is_palindrome - checks to revwi
  * @s: to be checked
- * Return: 1 if it is , 0 its
+ * Return: 1 if it is , 0 it's n
  */
 int is_palindrome(char *s)
 {
@@ -35,7 +37,7 @@ int _strlen_recursion(char *s)
  */
 int check_pal(char *s, int i, int len)
 {
-	if ((*s + i) != *(s + len - 1))
+	if (*(s + i) != *(s + len - 1))
 		return (0);
 	if (i >= len)
 		return (1);
