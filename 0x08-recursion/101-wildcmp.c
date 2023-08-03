@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * wildc,p -compares string
+ * wildcmp -compares string
  * @s1: pointer to string
  * @s2: pointer to params
  * Return: 0
