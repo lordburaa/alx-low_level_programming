@@ -8,19 +8,23 @@
   */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, k;
+	int i, j, k, l;
 
 	char *concat;
 
-
 	i = 0;
 	j = 0;
+	l = 0;
 
-	while (s1[i] != '\0' || s2[i] != '\0')
+	while (s1[i] != '\0')
 	{
 		i += 1;
 	}
-	concat = malloc(sizeof(char) * i);
+	while (s2[l] != '\0')
+	{
+		l++;
+	}
+	concat = malloc(sizeof(char) * (i + l));
 	if (concat == NULL)
 		return (NULL);
 	k = -1;
