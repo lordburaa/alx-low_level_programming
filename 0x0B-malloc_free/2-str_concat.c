@@ -24,15 +24,18 @@ char *str_concat(char *s1, char *s2)
 	{
 		l++;
 	}
-	concat = malloc(sizeof(char) * (i + l));
+	concat = malloc(sizeof(char) * (i + l - 2));
 	if (concat == NULL)
 		return (NULL);
 	k = -1;
+	if (s1 != NULL)
+	{
 	while (s1[j] != '\0')
 	{
 		k += 1;
 		concat[k] = s1[j];
 		j += 1;
+	}
 	}
 	j = 0;
 	if (s2 == NULL)
