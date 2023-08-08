@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		l++;
 	}
-	concat = malloc(sizeof(char) * (i + l - 2));
+	concat = malloc((sizeof(char) * (i + l)) - 1);
 	if (concat == NULL)
 		return (NULL);
 	k = -1;
