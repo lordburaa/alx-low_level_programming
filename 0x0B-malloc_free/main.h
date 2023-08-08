@@ -1,5 +1,5 @@
-#ifndef main_9
-#define main_9
+#ifndef main_8
+#define main_8
 char *create_array(unsigned int size, char c);
 int _putchar(char c);
 char *_strdup(char *str);

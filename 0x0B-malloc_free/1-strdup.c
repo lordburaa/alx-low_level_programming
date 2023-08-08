@@ -30,6 +30,7 @@ char *_strdup(char *str)
 		c = *(str + i);
 		_putchar(c);
 	}
+	free(ptr);
 	return (ptr);
 }
 
