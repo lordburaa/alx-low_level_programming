@@ -10,6 +10,7 @@
 int check_num(char *str)
 {
 	unsigned int i;
+
 	i = 0;
 	while (i < strlen(str))
 	{
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
 {
 	int count, int_count;
 	int sum = 0;
-	
+
 	count = 1;
 	while (count < argc)
 	{
