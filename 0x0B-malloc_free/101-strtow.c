@@ -22,7 +22,7 @@ int count_word(char *s)
 			j++;
 		}
 	}
-	return(j);
+	return (j);
 }
 /**
  * **strtow - splits string
