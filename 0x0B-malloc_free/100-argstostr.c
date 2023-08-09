@@ -2,14 +2,15 @@
 #include <stdlib.h>
 /**
  * argstostr - entry
- * @ac: int to be checked 
- * @av: char to be 
+ * @ac: int to be checked
+ * @av: char to be
  * Return: 0
  */
 char *argstostr(int ac, char **av)
 {
 	int i, j, r = 0, l = 0;
 	char *ptr;
+
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
@@ -30,7 +31,6 @@ char *argstostr(int ac, char **av)
 		}
 		if (ptr[r] == '\0')
 			ptr[r++] = '\n';
-	
 	}
 	return (ptr);
 }
