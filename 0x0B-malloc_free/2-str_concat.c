@@ -1,52 +1,42 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-  * str_concat - concatinate 2 string on allocated memory
-  * @s1: char to be checked
-  * @s2: char to be checked
-  * Return: Always succes
-  */
+ * str_concat - conat two string
+ * @s1: string to be conat
+ * @s2: string to be concat
+ * Return: two string toghether
+ */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, k, l;
+	char *conct;
+	int i, c;
 
-	char *concat;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-	i = 0;
-	j = 0;
-	l = 0;
+	i = c = 0;
+	while (s1[i] != '\0')
+		i++;
+	while(s2[c] != '\0')
+		c++;
+	conct = malloc(sizeof(char) * (i + c + 1));
 
+	if (conct == NULL)
+		return (NULL);
+	i = c = 0;
 	while (s1[i] != '\0')
 	{
-		i += 1;
+		conct[i] = s1[i];
+		i++;
 	}
-	while (s2[l] != '\0')
+	while(s2[c] != '\0')
 	{
-		l++;
+		conct[i] = s2[c];
+		i++;
+		c++;
 	}
-	concat = malloc(sizeof(char) * (i + l));
-	if (concat == NULL)
-		return (NULL);
-	k = -1;
-	if (s1 != NULL)
-	{
-	while (s1[j] != '\0')
-	{
-		k += 1;
-		concat[k] = s1[j];
-		j += 1;
-	}
-	}
-	j = 0;
-	if (s2 == NULL)
-		return (NULL);
-	while (s2[j] != '\0')
-	{
-		++k;
-		concat[k] = s2[j];
-		j++;
-	}
-	k++;
-	concat[k] = '\0';
-	return (concat);
+	conct[i] = '\0';
+	return (conct);
 }
