@@ -7,12 +7,12 @@
  * @argv: array
  * Return: Always 0
  */
-int main(int argc, char *argv[])
+int main(int arg, char *argv[])
 {
 	int num, i, result;
 	int coins[] = {25, 10, 5 ,2 ,1};
 
-	if (argc != 2)
+	if (arg != 2)
 	{
 		printf("Error\n");
 		return (1);
