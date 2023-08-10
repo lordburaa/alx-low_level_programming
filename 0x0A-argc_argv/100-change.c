@@ -3,14 +3,14 @@
 #include "main.h"
 /**
  * main - prints the minimum no of coins
- * @argc: number of arguments
+ * @arg: number of arguments
  * @argv: array
  * Return: Always 0
  */
 int main(int arg, char *argv[])
 {
 	int num, i, result;
-	int coins[] = {25, 10, 5 ,2 ,1};
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (arg != 2)
 	{
