@@ -28,26 +28,32 @@ int is_digit(char *s)
 int _strlen(char *s)
 {
 	int k = 0;
+
 	while (s[k] != '\0')
 	{
 		k++;
 	}
 	return (k);
 }
+/**
+ * errors - error
+ * Return: exit
+ */
 void errors(void)
 {
 	printf("Error\n");
 	exit(98);
 }
 /**
-  * main - multple two postive number
-  * @argc: numbr of arguments
-  * @argv: always 0
-  */
+ * main - multple two postive number
+ * @argc: numbr of arguments
+ * @argv: array of arguments
+ * Return: Always 0
+ */
 int main(int argc, char *argv[])
 {
 	char *s1, *s2;
-	int ln1, ln2, ln, j, carry, digit1, digit2, *result, a= 0;
+	int ln1, ln2, ln, j, carry, digit1, digit2, *result, a = 0;
 
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
@@ -60,7 +66,7 @@ int main(int argc, char *argv[])
 		return (1);
 	for (j = 0; j <= ln1 + ln2; j++)
 		result[j] = 0;
-	for (ln1 = ln1 -1 ; ln1 >= 0; ln1--)
+	for (ln1 = ln1 - 1 ; ln1 >= 0; ln1--)
 	{
 		digit1 = s1[ln1] - '0';
 		carry = 0;
