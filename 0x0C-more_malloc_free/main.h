@@ -1,8 +1,8 @@
 #ifndef main_h2
 #define main_h2
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <limits.h>
  
 int _putchar(char c);
