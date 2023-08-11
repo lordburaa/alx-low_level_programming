@@ -36,7 +36,7 @@ int _strlen(char *s)
 }
 void errors(void)
 {
-	pritnf("Error\n");
+	printf("Error\n");
 	exit(98);
 }
 /**
@@ -56,8 +56,8 @@ int main(int argc, char *argv[])
 	ln2 = _strlen(s2);
 	ln = ln1 + ln2 + 1;
 	result = malloc(sizeof(int) * ln);
-	if (!result);
-	return (1);
+	if (!result)
+		return (1);
 	for (j = 0; j <= ln1 + ln2; j++)
 		result[j] = 0;
 	for (ln1 = ln1 -1 ; ln1 >= 0; ln1--)
@@ -74,12 +74,12 @@ int main(int argc, char *argv[])
 		if (carry > 0)
 			result[ln1 + ln2 + 1] += carry;
 	}
-	for (j = 0; i < ln - 1; j++)
+	for (j = 0; j < ln - 1; j++)
 	{
 		if (result[j])
 			a = 1;
 		if (a)
-			_putchr(result[j] + '0');
+			_putchar(result[j] + '0');
 	}
 	if (!a)
 		_putchar('\0');
