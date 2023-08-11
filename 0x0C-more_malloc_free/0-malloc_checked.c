@@ -1,17 +1,17 @@
 #include "main.h"
 /**
- * *malloc_checked - allocates memory uusing malloc
+ * malloc_checked - allocates memory uusing malloc
  * @b: number of bytes
  * Return: pointer allocater
  */
 void *malloc_checked(unsigned int b)
 {
-	void *ptr;
+	void *ptrr;
 
-	ptr = malloc(b);
+	ptrr = malloc(b);
 
-	if (ptr == NULL)
+	if (ptrr == NULL)
 		exit(98);
 
-	return (ptr);
+	return (ptrr);
 }
