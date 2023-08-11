@@ -27,13 +27,13 @@ int is_digit(char *s)
  */
 int _strlen(char *s)
 {
-	int k = 0;
+	int j = 0;
 
-	while (s[k] != '\0')
+	while (s[j] != '\0')
 	{
-		k++;
+		j++;
 	}
-	return (k);
+	return (j);
 }
 /**
  * errors - error
@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
 			_putchar(result[j] + '0');
 	}
 	if (!a)
-		_putchar('\0');
+		_putchar('0');
 	putchar('\n');
 	free(result);
 	return (0);
