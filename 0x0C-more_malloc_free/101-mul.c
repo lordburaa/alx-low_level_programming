@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 	}
 	for (j = 0; i < ln - 1; j++)
 	{
-		if (result[i])
+		if (result[j])
 			a = 1;
 		if (a)
 			_putchr(result[j] + '0');
