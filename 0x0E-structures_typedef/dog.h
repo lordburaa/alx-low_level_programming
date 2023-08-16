@@ -1,5 +1,5 @@
-#ifndef dog_h
-#define dog_h
+#ifndef dog_hh
+#define dog_hh
 /**
  * struct dog - owner
  * @name: name
@@ -11,7 +11,7 @@ struct dog
 {
 	char *name;
 	float age;
-	char *owner
+	char *owner;
 };
 /**
  * dog_t - tprede
