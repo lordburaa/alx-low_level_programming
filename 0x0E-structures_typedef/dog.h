@@ -1,7 +1,5 @@
 #ifndef dog_h
 #define dog_h
-#include "dog.h"
-#include <stdlib.h>
 /**
  * struct dog - owner
  * @name: name
