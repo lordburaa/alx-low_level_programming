@@ -1,3 +1,5 @@
+#ifndef dog_j
+#define dog_h
 #include "dog.h"
 #include <stdlib.h>
 /**
@@ -7,12 +9,20 @@
  * @owner: owner
  * Return : 0
  */
-void init_dog(struct dog *P, char 8name, float, char *owner)
+struct dog
 {
-	if (s == NULL)
-		d =malloc(sizeof(struct dog));
-	d->name = name;
-	d->age = age;
-	d->owwner = owner;
-}
-
+	char *name;
+	float age;
+	char *owner
+};
+/**
+ * dog_t - tprede
+ */
+typedef struct dog dog_t;
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+char *_strcpy(char *dest, char *src);
+int strlen(char *s);
+#endif
