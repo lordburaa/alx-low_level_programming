@@ -1,4 +1,4 @@
-#ifndef DOG__H
+#ifndef DOG_H
 #define DOG_H
 /**
  * struct dog - dogs basic info
