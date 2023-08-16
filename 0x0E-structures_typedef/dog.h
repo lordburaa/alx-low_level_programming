@@ -1,5 +1,3 @@
-#ifndef strucc
-#define strucc
 #include "dog.h"
 #include <stdlib.h>
 /**
@@ -17,4 +15,4 @@ void init_dog(struct dog *P, char 8name, float, char *owner)
 	d->age = age;
 	d->owwner = owner;
 }
-#endif
+
