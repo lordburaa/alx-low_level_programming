@@ -1,5 +1,7 @@
 #ifndef strucc
 #define strucc
+#include "dog.h"
+#include <stdlib.h>
 /**
  * struct dog - owner
  * @name: name
@@ -7,10 +9,12 @@
  * @owner: owner
  * Return : 0
  */
-struct dog
+void init_dog(struct dog *P, char 8name, float, char *owner)
 {
-	char *name;
-	float age;
-	char *owner;
-};
+	if (s == NULL)
+		d =malloc(sizeof(struct dog));
+	d->name = name;
+	d->age = age;
+	d->owwner = owner;
+}
 #endif
