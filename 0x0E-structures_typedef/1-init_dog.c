@@ -1,7 +1,7 @@
 #ifndef init_d
 #define init_d
 #include <stdlib.h>
-
+#include "dog.h"
 /**
  * init_dog - type struct dog
  * @d: pointer t oostruct dog to intialize
