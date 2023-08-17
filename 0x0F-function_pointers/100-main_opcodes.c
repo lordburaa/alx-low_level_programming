@@ -3,7 +3,7 @@
 /**
  * main - prints opcode of itsef
  * @argc: nnumber of arg
- * @argv: array of pointer 
+ * @argv: array of pointer
  * Return: Always 0
  */
 int main(int argc, char *argv[])
