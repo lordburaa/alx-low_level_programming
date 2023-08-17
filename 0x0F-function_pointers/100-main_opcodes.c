@@ -9,8 +9,9 @@
 int main(int argc, char *argv[])
 {
 	int byt, idx;
-	int (address)(int, char **) = main;
+	int (*addss)(int, char **) = main;
 	unsigned char opcode;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -24,13 +25,13 @@ int main(int argc, char *argv[])
 	}
 	for (idx = 0; idx < byt; idx++)
 	{
-		opcode = *(unsigned char *)address;
+		opcode = *(unsigned char *)addss;
 		printf("%.2x", opcode);
 
 		if (idx == byt - 1)
 			continue;
 		printf(" ");
-		address++;
+		addss++;
 	}
 	printf("\n");
 	return (0);
