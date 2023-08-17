@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		printf("%.2x", opcode);
 
 		if (idx == byt - 1)
-			cotinue;
+			continue;
 		printf(" ");
 		address++;
 	}
