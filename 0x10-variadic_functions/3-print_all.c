@@ -5,7 +5,7 @@
  * print_all - prints anything
  * @format: list of types of arguments
  */
-void print_all(consr char * const format, ...)
+void print_all(const char * const format, ...)
 {
 	int j = 0;
 	char *str, *sp = "";
@@ -15,31 +15,31 @@ void print_all(consr char * const format, ...)
 	va_start(list, format);
 	if (format)
 	{
-		while (format[i])
+		while (format[j])
 		{
-			switch (format[i])
+			switch (format[j])
 			{
 				case 'c':
 					printf("%s%c", sp, va_arg(list, int));
-				break;
+					break;
 				case 'i':
-				printf("%s%ld", sp, va_arg(list, int));
-				break;
+					printf("%s%d", sp, va_arg(list, int));
+					break;
 				case 'f':
-					printf("%s%c", sp, va_arg(list, double));
-				break;
+					printf("%s%f", sp, va_arg(list, double));
+					break;
 				case 's':
-				str = vs_arg(list, char *);
-				if (!str)
-					str = "(nil)";
-				printf("%s%s", sp, str);
-				break;
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sp, str);
+					break;
 				default:
-				i++;
+				j++;
 				continue;
 			}
-			sep = ", ";
-			i++;
+			sp = ", ";
+			j++;
 		}
 	}
 	printf("\n");
