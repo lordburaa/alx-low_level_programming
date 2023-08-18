@@ -1,9 +1,12 @@
-#ifndef clc
-#define clc
+#ifndef clc_h
+#define clc_h
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * struct op - struct op
  * @op: operator
- * f: function
+ * @f: function
  */
 typedef struct op
 {
@@ -17,4 +20,5 @@ int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
+
 #endif

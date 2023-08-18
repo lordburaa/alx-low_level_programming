@@ -7,17 +7,20 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] = {
-		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_div},
-		{"%", op_mod},
-		{NULL, NULL}
-	};
-	int i = 0;
+	op_t test;
+	test.op = s;
+	test.f = NULL;
 
-	while(ops[i].op != NULL && *(ops[i].op) != *s)
-		i++;
-	return (ops[i].f);
+	while (*test.op == '+' || *test.op == '-' || *test.op == '*' || *test.op == '/' || *test.op == '%')
+	{
+		test.f = (*test.op == '+') ? &op_add:
+			(*test.op == '-') ? &op_sub:
+			(*test.op == '*') ? &op_mul:
+			(*test.op == '/') ? &op_div:
+			(*test.op == '%') ? &op_mod:
+			NULL;
+		test.op++;
+
+	}
+	return (test.f);
 }
