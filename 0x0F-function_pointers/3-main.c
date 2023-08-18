@@ -1,7 +1,7 @@
 #include "3-calc.h"
 #include <string.h>
 /**
- * main - functoin 
+ * main - functoin
  * @argc: number of arguments
  * @argv: array of arguments
  * Return: 0
@@ -15,7 +15,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (98);
 	}
-	if ((*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' && *argv[2] != '/' && *argv[2] != '%') || (strlen(argv[2]) > 1))
+	if ((*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*'
+				&& *argv[2] != '/' && *argv[2] != '%') || (strlen(argv[2]) > 1))
 	{
 		printf("Error\n");
 		return (99);
