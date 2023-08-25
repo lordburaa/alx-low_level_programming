@@ -6,7 +6,7 @@
  */
 size_t list_len(const list_t *h)
 {
-	unsigned int j = 0;
+	size_t j = 0;
 
 	while (h != NULL)
 	{
