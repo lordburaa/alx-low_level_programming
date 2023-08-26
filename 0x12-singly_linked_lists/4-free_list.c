@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 /**
  * free_list - fres a list
@@ -14,7 +12,7 @@ void free_list(list_t *head)
 	{
 		tmp = head->next;
 		free(head->str);
-		free(tmp);
+		free(head);
 		head = tmp;
 	}
 }

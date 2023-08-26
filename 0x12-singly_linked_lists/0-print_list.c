@@ -1,4 +1,5 @@
-#include "main.h"
+#include "lists.h"
+#include <stdio.h>
 /**
  * print_list - prints all elments
  * @h: singly linkedd list
@@ -14,7 +15,7 @@ size_t print_list(const list_t *h)
 		if (!h->str)
 			printf("[0] (nil)\n");
 		else
-			printf("[%u] %s\n", h->leg, h->str);
+			printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
 		lem++;
 	}
