@@ -1,7 +1,7 @@
 #include <stdio.h>
 void first(void) __attribute__ ((constructor));
 /**
- * bmain - function excuted before  main
+ * first - function excuted before  main
  * Return: no return
  */
 void first(void)
