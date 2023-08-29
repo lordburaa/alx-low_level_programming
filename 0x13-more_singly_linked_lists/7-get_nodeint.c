@@ -1,18 +1,19 @@
 #include "lists.h"
-
-listint_t *get_noseint_at_index(listint_t *head, unsigned int index)
+/**
+ * get_nodeint_at_index - retrun node
+ * @head: first node
+ * @index: index node to return
+ * Return: NULL
+ */
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *p = head, *c;
+	listint_t *tmp;
 	unsigned int i;
 
-	if (head == NULL)
-		return (NULL);
-	for (i = 0; i < index; i++)
+	while (tmp && i < index)
 	{
-		if (p->next == NULL)
-			return (NULL);
-		c = p->next;
-		p = c;
+		tmp = tmp->next;
+		i++;
 	}
-	return (p);
+	return (tmp ? tmp : NULL);
 }

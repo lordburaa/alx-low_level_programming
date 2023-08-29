@@ -1,33 +1,39 @@
 #include "lists.h"
 /**
- * insert_nodeint_at_index - insert new node
- * @head: fitst node
- * @idx: new node added
- * @n: data to be added
+ * insert_nodeint_at_index - new node list
+ * @head: first nodde list
+ * @idx: index newnode 
+ * @n: data to insert in the new
  * Return: pointer
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
-{ 
-	listint_t *ptr, *c;
+{
 	unsigned int i;
+	listint_t *nw;
+	listint_t *tmp = *head;
 
-	if (head == NULL)
+	new = malloc(sizeof(listint_t));
+	if (!new || !head)
 		return (NULL);
-
-	c->n=n;
-	ptr = *head;
+	nw->n = n;
+	nw->next = NULL;
 
 	if (idx == 0)
 	{
-		c->next = ptr;
-		*head = c;
-		return (c);
+		new->next = *head;
+		*head = nw;
+		return (nw);
 	}
-	for (i = 0; i < idx - 1; i++)
+	for (i = 0; tmp && i < idx; i++)
 	{
-		if (ptr == NULL)
-			return (NULL);
-		c->next = ptr->next;
-		ptr->next = c;
-		return (c);
+		if (i == idx - 1)
+		{
+			nw->next = tmp->next;
+			tmp->next = nw;
+			return (nw);
+		}
+		else
+			tmp = tmp->next;
 	}
+	return (NULL);
+}

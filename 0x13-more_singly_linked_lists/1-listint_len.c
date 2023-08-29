@@ -1,12 +1,12 @@
 #include "lists.h"
 /**
- * listint_len - number of elets 
+ * listint_len - number of elets
  * @h: pointer to head
  * Return: elements in list
  */
 size_t listint_len(const listint_t *h)
 {
-	int k = 0;
+	size_t k = 0;
 
 	while (h)
 	{

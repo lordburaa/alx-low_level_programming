@@ -17,14 +17,13 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	ptr->n = n;
 	ptr->next = NULL;
 	if (*head == NULL)
-	{
 		*head = ptr;
-		return (*head);
-	}
-	while (lastN->next != NULL)
+	else
 	{
+		lastN = *head;
+		while (lastN->next != NULL)
+			lastN = lastN->next;
 		lastN->next = ptr;
-
-		return (*head);
 	}
+	return (*head);
 }
