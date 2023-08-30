@@ -4,7 +4,7 @@
  * @head: linked list to search
  * Return: address of node where
  */
-listint_t *find_listint(listint_t *head)
+listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *slw = head;
 	listint_t *fast = head;
