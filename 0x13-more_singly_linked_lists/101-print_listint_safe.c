@@ -11,7 +11,7 @@ size_t print_listint_safe(const listint_t *head);
 size_t looped_listint_len(const listint_t *head)
 {
 	const listint_t *tort, *hr;
-	size_t nodes = 1;
+	size_t node = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
@@ -25,16 +25,17 @@ size_t looped_listint_len(const listint_t *head)
 			tort = head;
 			while (tort != hr)
 			{
-				nodes++;
+				node++;
 				tort = tort->next;
+				hr = hr->next;
 			}
 			tort = tort->next;
 			while (tort != hr)
 			{
-				nodes++;
+				node++;
 				tort = tort->next;
 			}
-			return (nodes);
+			return (node);
 		}
 		tort = tort->next;
 		hr = (hr->next)->next;
