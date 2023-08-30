@@ -10,11 +10,11 @@ int pop_listint(listint_t **head)
 	listint_t *ptr;
 	int n;
 
-	if (!head || *head)
+	if (!head || !*head)
 		return (0);
 	n = (*head)->n;
 	ptr = (*head)->next;
-	free(ptr);
+	free(*head);
 	*head = ptr;
 
 	return (n);
