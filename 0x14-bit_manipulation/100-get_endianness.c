@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * get_endianness - checks if machine is little 
+ * get_endianness - checks if machine is little
  * Return: 0
  */
 int get_endianness(void)
