@@ -1,22 +1,21 @@
 #include "main.h"
 /**
- * _strncat - concatenate two strings
- * @dest: input value
- * @src: input value
- * @n: input value
- * Return: dest
+ * _strncat - string concatenates
+ * @dest:char to checke
+ * @src: char to checked
+ * @n: bytes to concatenate
+ * Return: string 
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, j;
+	int i = 0;
+	int j = 0;
 
-	i = 0;
 	while (dest[i] != '\0')
-	{
 		i++;
-	}
-	j = 0;
-	while (j < n && src[j] != '\0')
+	
+
+	while (j < n)
 	{
 		dest[i] = src[j];
 		i++;
@@ -25,4 +24,3 @@ char *_strncat(char *dest, char *src, int n)
 	dest[i] = '\0';
 	return (dest);
 }
-
