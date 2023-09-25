@@ -24,7 +24,9 @@ char *cap_string(char *str)
 				str[i] = c;
 				continue;
 			}
+		
 		}
+		str[i] = str[i];
 		i++;
 	}
 	return (str);
