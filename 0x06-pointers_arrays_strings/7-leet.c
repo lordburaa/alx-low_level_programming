@@ -8,10 +8,10 @@ char *leet(char *str)
 {
 	char c[12] = "AaEeoOtTlL";
 	char f[12] = "44330077";
-	unsigned int i, k;
+	int i, k;
 
 	k = 0;
-	for (i = 0; str[i] != '\0' || str[i] == ' ' || str[i] == '\t'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		while (k < 10)
 		{
