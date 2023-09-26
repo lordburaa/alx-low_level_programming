@@ -1,39 +1,26 @@
 #include "main.h"
-
+/**
+ * leet - encoded character
+ * @str: charachter to be checked
+ * Return: character 
+ */
 char *leet(char *str)
 {
-	int i = 0;
+	char c[] = "AaEeoOtTlL";
+	char f[] = "44330077";
+	int i, k;
 
-	while (str[i] != '\0')
+	k = 0;
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == 'a' || str[i] == 'A')
+		while (c[k] != '\0')
 		{
-			str[i] = '0' + 4;
-		        continue;
+			if (c[k] == str[i])
+				str[i] = f[k];
+			k++;
 		}
-		if (str[i] == 'e' || str[i] == 'E')
-		{
-                       str[i] = '0' + 3;
-		       continue;
-		}
-		if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0' + 0;
-			continue;
-		}
-
-		if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '0' + 7;
-			continue;
-		}
-
-		if (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = '0' + 1;
-			continue;
-		}
-		i++;
+		k = 0;
 	}
+	putchar('\n');
 	return (str);
 }
