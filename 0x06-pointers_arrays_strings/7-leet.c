@@ -2,18 +2,18 @@
 /**
  * leet - encoded character
  * @str: charachter to be checked
- * Return: character 
+ * Return: character
  */
 char *leet(char *str)
 {
-	char c[] = "AaEeoOtTlL";
-	char f[] = "44330077";
-	int i, k;
+	char c[12] = "AaEeoOtTlL";
+	char f[12] = "44330077";
+	unsigned int i, k;
 
 	k = 0;
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0' || str[i] == ' ' || str[i] == '\t'; i++)
 	{
-		while (c[k] != '\0')
+		while (k < 10)
 		{
 			if (c[k] == str[i])
 				str[i] = f[k];
@@ -21,6 +21,5 @@ char *leet(char *str)
 		}
 		k = 0;
 	}
-	putchar('\n');
 	return (str);
 }
