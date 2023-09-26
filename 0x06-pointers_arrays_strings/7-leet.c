@@ -13,13 +13,11 @@ char *leet(char *str)
 	k = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		while (k < 10)
+		for (k = 0; k < 10; k++)
 		{
 			if (c[k] == str[i])
 				str[i] = f[k];
-			k++;
 		}
-		k = 0;
 	}
 	return (str);
 }
