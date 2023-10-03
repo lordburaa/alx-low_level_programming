@@ -2,7 +2,7 @@
 
 
 
-int _strlen(char *str );
+int _strlen(char *str);
 /**
  * _strstr - finds the firsst occurene of needle in th haystack
  * @haystack:  string to be chekced
@@ -40,6 +40,12 @@ char *_strstr(char *haystack, char *needle)
 	}
 	return (NULL);
 }
+/**
+ * _strlen - stirng lenght
+ * @str: string to count
+ *
+ * Return: string lenght
+ */
 
 int _strlen(char *str)
 {
