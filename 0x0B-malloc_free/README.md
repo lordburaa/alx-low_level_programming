@@ -1,1 +1,1 @@
-dynamic allocate
+malloc-free
