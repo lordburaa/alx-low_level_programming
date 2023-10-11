@@ -1,6 +1,5 @@
 #include "main.h"
 
-int  _strlen(char *s);
 /**
  * string_nconcat - stirng concatenate
  * @s1: string to be checke
@@ -12,40 +11,29 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
 	unsigned int j = 0;
-	unsigned int i;
+	int i;
+	int k = 0;
 	if (s1 == NULL)
 		s1 = "";
-	i = _strlen(s1);
-
+	if (s2 == NULL)
+		s2 = "";
+	while (s1[i] != '\0')
+		i++;
+	
 	ptr = malloc(sizeof(char) * (i + n + 1));
 	if (ptr == NULL)
 		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
+	
+	while (s1[k] != '\0')
 	{
-		ptr[i] = s1[i];
-		i++;
+		ptr[k] = s1[k];
+		k++;
 	}
-	if (s2 == NULL)
-		s2 = "";
 	for (j = 0; j < n && s2[j] != '\0'; j++)
 	{
-		ptr[i] = s2[j];
-		i++;
+		ptr[k] = s2[j];
+		k++;
 	}
+	ptr[i] = '\0';
 	return (ptr);
-}
-/**
- * _strlen - string length
- * @s: string to be checked
- *
- * Return:string length
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-		i++;
-	return (i);
 }
