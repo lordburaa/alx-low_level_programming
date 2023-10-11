@@ -18,13 +18,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
+	if (s1 == NULL)
+		s1 = "";
 	while (s1[i] != '\0')
 	{
 		ptr[i] = s1[i];
 		i++;
 	}
 	if (s2 == NULL)
-		s1 = "";
+		s2 = "";
 	for (j = 0; j < n && s2[j] != '\0'; j++)
 	{
 		ptr[i] = s2[j];
