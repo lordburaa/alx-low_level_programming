@@ -18,9 +18,9 @@ int *array_range(int min, int max)
 	ptr =  malloc(sizeof(int) * j);
 	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; i <= j; i++)
+	for (i = 0; i < j; i++)
 	{
-		if (i == j)
+		if (i == (j - 1))
 		{
 			ptr[i] = max;
 			break;
