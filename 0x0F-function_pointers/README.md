@@ -1,1 +1,1 @@
-0x0F-function_poinrer
+0x0F-function pointer
