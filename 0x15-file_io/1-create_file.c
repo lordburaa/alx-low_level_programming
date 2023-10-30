@@ -10,7 +10,7 @@ int create_file(const char *filename, char *text_content)
 	int i = 0;
 	int fd;
 
-	fd = open(filename, O_RDWR | O_CREAT | O_APPEND, S_IRUSR);
+	fd = open(filename, O_RDWR | O_CREAT | O_APPEND, 00600);
 
 	if (fd == -1)
 		return (-1);
