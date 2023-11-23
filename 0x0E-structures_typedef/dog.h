@@ -7,6 +7,12 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
+/**
+ * struct dog - struc dog
+ * @name: name
+ * @age: age
+ * @owner: owner
+ */
 typedef struct dog
 {
 	char *name;
