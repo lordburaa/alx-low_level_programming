@@ -8,8 +8,8 @@ void free_dlistint(dlistint_t *head)
 	dlistint_t *temp = head;
 	dlistint_t *fre;
 
-	if (*head == NULL)
-		return (NULL);
+	if (head == NULL)
+		return;
 	while (temp != NULL)
 	{
 		fre = temp;
