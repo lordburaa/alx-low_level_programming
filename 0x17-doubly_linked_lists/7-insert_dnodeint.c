@@ -48,7 +48,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		i++;
 		temp = temp->next;
 	}
-	free(new);
-	free(temp);
+/*	free(new);
+*/	free_dlistint(new);
+	
 	return (NULL);
 }

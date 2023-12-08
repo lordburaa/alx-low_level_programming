@@ -1,30 +1,59 @@
 #include "lists.h"
-
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
+/**
+ * insert_dnodeint_at_index -  insert new node at given positon
+ * @h: head
+ * @idx: index
+ * @n: number
+ * Return: the address of the new node
+ */
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *temp = *head;
 	unsigned int i = 0;
 
-	
-	if ((temp->next == NULL && idx == 0))
+	if (*head == NULL)
 	{
-		
-	/*	free_dlistint(temp->next);
-		free_dlistint(temp->prev);
-		free_dlistint(temp);
-	*/	
-		return (0);
+		return (-1);
 	}
-	if (idx == 0)
+	if (index == 0)
 	{
-		(*head) = temp->next;
+		*head = temp->next;
+		if (temp->next != NULL)
+			temp->next->prev = NULL;
+
 		free(temp);
+		return (1);
 	}
-	while (temp && i != idx -2)
+/*	if (temp->next == NULL)
 	{
-			i++;
-			temp = temp->next;
+		*head = NULL;
+		return (1);
 	}
-	temp->next = temp->next->next;
-	return (1);	
+*/	
+	for (i = 0; temp != NULL &&  i < index - 1; i++)
+	{
+		temp = temp->next;
+	}
+	
+	if (temp->next == NULL && temp == NULL)
+	{
+		return (-1);
+	}
+	if (temp->next->next != NULL)
+	{
+		temp = temp->next->next;
+		free(temp->next->prev);
+		temp->next->prev  = temp;
+		return (1);
+
+	}
+	else
+	{
+		free(temp->next);
+
+		temp->next = NULL;
+		return (1);
+	}
+	
+	return (-1);
 }
