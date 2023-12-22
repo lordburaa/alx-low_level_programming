@@ -1,10 +1,16 @@
 #include "hash_tables.h"
-
+/**
+ * hash_table_set - set hash table
+ * @ht: table
+ * @key: key
+ * @value: value for the key
+ * Return: 1 if success, other wise 0
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new;
 	char *str;
-	unsigned long int index,i;
+	unsigned long int index, i;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
@@ -37,6 +43,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->value = str;
 	new->next = ht->array[index];
 	ht->array[index] = new;
-	
+
 	return (1);
 }
