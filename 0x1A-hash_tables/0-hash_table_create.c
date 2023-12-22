@@ -1,13 +1,16 @@
 #include "hash_tables.h"
-
+/**
+ * hash_table_create - create  hash table
+ * @size: size to be c hekcd
+ * Return: on succes the new node else null
+ */
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned int i;
-
-	hash_table_t* new = malloc(sizeof(hash_table_t));
+	hash_table_t *new;
 
 	if (new == NULL)
-		return NULL;
+		return (NULL);
 	new->size = size;
 	new->array = malloc(size * sizeof(hash_node_t *));
 	if (new->array == NULL)
@@ -19,6 +22,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 		new->array[i] = NULL;
 	}
-		return NULL;
-	return new;
+		return (NULL);
+	return (new);
 }
